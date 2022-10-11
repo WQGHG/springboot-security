@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<p th:if="${error}">用户名或者密码错误</p>
+<h1 th:text="请输入用户名密码"></h1>
+<form method="post" th:action="@{/login}" onsubmit="return beforeSubmit(this);">
+  用户名：<label>
+  <input type="text" name="userName">
+</label><br>
+  密码：<label>
+  <input type="password" name="userPassWord">
+</label><br>
+  <input th:type="submit" th:value="登录"><hr>
+</form>
+<a href="/register">注册</a>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  function beforeSubmit(form){
+    if(form.userName.value===''){
+      alert('用户名不能为空！');
+      form.userName.focus();
+      return false;
+    }
+
+    if(form.userPassWord.value.length===''){
+      alert('密码不能为空！');
+      form.userPassWord.focus();
+      return false;
+    }
+    return true;
+  }
+</script>

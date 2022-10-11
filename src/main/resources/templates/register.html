@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<p th:if="${error}">注册错误</p>
+<h1 th:text="请输入注册信息"></h1>
+<form method="post" action="/user/register" onsubmit="return beforeSubmit(this);">
+  邮箱：<label>
+    <input type="text" name="email">
+</label><br>
+  用户名：<label>
+    <input type="text" name="userName">
+</label><br>
+    用户角色：<label>
+    <input type="radio" name="userRole" value="ADMIN" />管理员
+    <input type="radio" name="userRole" value="USER" />普通用户
+</label><br>
+  密码：<label>
+    <input type="password" name="userPassWord">
+</label><br>
+    <input th:type="submit" th:value="注册"><hr>
+</form>
+<a href="/login">登录</a>
+<a href="/index" th:href="@{/index}">返回首页</a> <br/>
+</body>
+</html>
+<script type="text/javascript">
+    function beforeSubmit(form){
+        if(form.email.value===''){
+            alert('邮箱不能为空！');
+            form.email.focus();
+            return false;
+        }
+        if(form.userName.value===''){
+            alert('用户名不能为空！');
+            form.userName.focus();
+            return false;
+        }
+        if(form.userRole.value===''){
+            alert('用户角色不能为空！');
+            form.userRole.focus();
+            return false;
+        }
+        if(form.userPassWord.value.length<6){
+            alert('密码至少为6位，请重新输入！');
+            form.userPassWord.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
