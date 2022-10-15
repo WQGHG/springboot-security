@@ -1,4 +1,4 @@
-package com.learn.wqgstart.controller;
+package com.learn.security.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

@@ -1,9 +1,9 @@
-package com.learn.wqgstart.security;
+package com.learn.security.security;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.learn.wqgstart.mapper.UserMapper;
-import com.learn.wqgstart.model.User;
+import com.learn.security.mapper.UserMapper;
+import com.learn.security.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

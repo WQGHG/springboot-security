@@ -1,9 +1,9 @@
-package com.learn.wqgstart.service;
+package com.learn.security.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.learn.wqgstart.mapper.UserMapper;
-import com.learn.wqgstart.model.User;
+import com.learn.security.mapper.UserMapper;
+import com.learn.security.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 
 /**
- * Created by wangqinggang on 2022/10/5.
+ * Created by wangqinggang on 2021/3/5.
  */
 @Component
 @Slf4j

@@ -1,4 +1,4 @@
-package com.learn.wqgstart.model;
+package com.learn.security.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * Created by wangqinggang on 2022/10/5.
+ * Created by wangqinggang on 2021/3/5.
  */
 @Data
 public class User {
